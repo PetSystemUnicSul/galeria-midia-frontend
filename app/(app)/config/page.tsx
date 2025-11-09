@@ -8,6 +8,8 @@ import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'react-hot-toast';
 import styles from './config.module.css';
 
+export const dynamic = 'force-dynamic';
+
 export default function ConfigPage() {
   const { user } = useAuth(); // Pega o usuário logado
 

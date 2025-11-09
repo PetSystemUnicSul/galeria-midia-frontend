@@ -11,6 +11,8 @@ import { Plus } from 'lucide-react';
 // 1. Importamos o CSS Module
 import styles from './dashboard.module.css';
 
+export const dynamic = 'force-dynamic';
+
 interface Group {
   id: number;
   name: string;

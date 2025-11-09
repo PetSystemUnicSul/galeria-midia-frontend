@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image'; // Para a imagem de fundo
 import styles from './home.module.css';
 
+export const dynamic = 'force-dynamic';
+
 export default function HomePage() {
   return (
     <div className={styles.container}>

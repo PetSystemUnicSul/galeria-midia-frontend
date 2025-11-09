@@ -11,6 +11,8 @@ import MediaGallery from '@/components/MediaGallery';
 // 1. Importamos o CSS Module
 import styles from './media.module.css';
 
+export const dynamic = 'force-dynamic';
+
 interface Media {
   id: number;
   file_name: string;

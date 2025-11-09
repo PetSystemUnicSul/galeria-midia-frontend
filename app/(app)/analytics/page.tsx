@@ -12,6 +12,8 @@ import MediaEngagementChart from '@/components/MediaEngagementChart';
 // Importamos os estilos
 import styles from './analytics.module.css';
 
+export const dynamic = 'force-dynamic';
+
 // O tipo de dados que esperamos do backend
 interface DashboardData {
   active_sessions_count: number;
