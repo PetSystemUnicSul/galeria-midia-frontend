@@ -99,8 +99,12 @@ export default function LoginPage() {
     <div className={styles.container}>
       {/* 5. CABEÇALHO ADICIONADO COM LINK PARA HOME */}
       <header className={styles.pageHeader}>
-        <Link href="/" className={styles.pageLogo}>
-          VIU
+        <Link href="/">
+          <img
+            src="/assets/images/viu-logo-full.png"
+            alt="VIU Logo"
+            className={styles.logoImage}
+          />
         </Link>
       </header>
 

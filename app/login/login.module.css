@@ -22,6 +22,10 @@
   color: var(--foreground); /* MUDOU */
   text-decoration: none;
 }
+.logoImage {
+  height: 2.2rem; /* Ajuste a altura do logo conforme necessário */
+  width: auto; /* Mantém a proporção */
+}
 
 /* Card de Login */
 .card {

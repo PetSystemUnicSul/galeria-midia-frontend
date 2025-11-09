@@ -194,8 +194,12 @@ export default function TvPage() {
       <div className={styles.formContainer}>
 
         <header className={styles.pageHeader}>
-          <Link href="/" className={styles.pageLogo}>
-            VIU
+          <Link href="/">
+            <img
+              src="/assets/images/viu-logo-full.png"
+              alt="VIU Logo"
+              className={styles.logoImage}
+            />
           </Link>
         </header>
 

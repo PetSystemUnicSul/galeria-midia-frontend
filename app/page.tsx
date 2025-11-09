@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image'; // Para a imagem de fundo
 import styles from './home.module.css';
+import { Download, Shield, TvMinimalPlay } from "lucide-react";
 
 export const dynamic = 'force-dynamic';
 
@@ -10,8 +11,12 @@ export default function HomePage() {
     <div className={styles.container}>
       {/* Header */}
       <header className={styles.header}>
-        <Link href="/" className={styles.logo}>
-          VIU
+        <Link href="/">
+          <img
+            src="/assets/images/viu-logo-full.png"
+            alt="VIU Logo"
+            className={styles.logoImage}
+          />
         </Link>
         <nav className={styles.navButtons}>
           <Link href="/login">Login</Link>
@@ -56,7 +61,7 @@ export default function HomePage() {
         <div className={styles.stepsContainer}>
           {/* Step 1 */}
           <div className={styles.stepCard}>
-            <span className={styles.stepIcon}>⬇️</span> {/* Ícone de download */}
+            <Download size={50}/>
             <h3 className={styles.stepNumber}>1. Faça Upload</h3>
             <p className={styles.stepDescription}>
               Envie suas imagens, vídeos e conteúdo publicitário através da nossa
@@ -65,7 +70,7 @@ export default function HomePage() {
           </div>
           {/* Step 2 */}
           <div className={styles.stepCard}>
-            <span className={styles.stepIcon}>🛡️</span> {/* Ícone de escudo */}
+            <Shield size={50}/>
             <h3 className={styles.stepNumber}>2. Gere o Código</h3>
             <p className={styles.stepDescription}>
               Receba um código único para acessar seu conteúdo em qualquer TV Smart
@@ -74,7 +79,7 @@ export default function HomePage() {
           </div>
           {/* Step 3 */}
           <div className={styles.stepCard}>
-            <span className={styles.stepIcon}>📺</span> {/* Ícone de TV */}
+            <TvMinimalPlay size={50}/>
             <h3 className={styles.stepNumber}>3. Exiba na TV</h3>
             <p className={styles.stepDescription}>
               Digite o código na TV Smart e suas propagandas começam a rodar

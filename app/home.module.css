@@ -21,6 +21,13 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logoImage {
+  height: 2.2rem; /* Ajuste a altura do logo conforme necessário */
+  width: auto; /* Mantém a proporção */
 }
 
 .logo {
@@ -55,18 +62,20 @@
 
 /* Hero Section (Seção Principal com a imagem de fundo) */
 .heroSection {
-  background-image: url('/keyboard-bg.jpg'); /* Imagem de fundo */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/home-background.jpg');
   background-size: cover;
   background-position: center;
-  padding: 8rem 2rem 4rem; /* Ajuste para o header fixo */
+  
+  padding: 8rem 2rem 4rem; 
   text-align: center;
-  min-height: 70vh; /* Altura mínima */
+  min-height: 70vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  
   position: relative;
-  color: white; /* Texto branco */
 }
 
 .heroSection::before {
@@ -85,12 +94,21 @@
 }
 
 .heroSmallText {
-  background-color: #007bff; /* Fundo azul para texto pequeno */
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 1rem;
+  background-color: rgba(30, 144, 255, 0.2); /* Azul com transparência */
+  color: #add8e6; /* Azul claro para o texto */
+  padding: 0.5rem 1.5rem; /* Mais preenchimento para parecer uma cápsula */
+  border-radius: 9999px; /* Bordas bem arredondadas (cápsula) */
+  display: inline-block; /* Para o padding funcionar e ter fundo */
+  margin-bottom: 1.5rem; /* Um pouco mais de espaço abaixo */
   font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  /* Removemos o cursor de ponteiro e adicionamos um leve box-shadow para profundidade */
+  cursor: default; /* Garante que não pareça clicável */
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.2); /* Sombra sutil azulada */
+  border: 1px solid rgba(30, 144, 255, 0.4); /* Borda sutil para definir a forma */
 }
 
 .heroTitle {
@@ -148,19 +166,23 @@
 }
 
 .stepCard {
-  background-color: #2b2b2b; /* Fundo escuro para cards */
+  background-color: var(--card);
+  border-radius: 0.75rem;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+  margin: 1rem;
+  text-align: center;
 }
 
 .stepIcon {
-  font-size: 3rem; /* Tamanho do ícone */
-  color: #007bff;
+  /* Adicionamos tamanho para SVG */
+  width: 3rem;  /* 48px */
+  height: 3rem; /* 48px */
+  stroke-width: 2; /* Define a espessura da linha do ícone */
+
+  color: var(--primary); /* Mantém a cor azul */
   margin-bottom: 1rem;
 }
 
