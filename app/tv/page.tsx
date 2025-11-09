@@ -25,7 +25,6 @@ interface GroupDetails {
   media: Media[];
 }
 
-export const dynamic = 'force-dynamic';
 
 export default function TvPage() {
   // Estado do formulário
