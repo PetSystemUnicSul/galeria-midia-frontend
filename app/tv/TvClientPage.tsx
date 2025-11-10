@@ -207,12 +207,13 @@ export default function TvPage() {
           <h1 className={styles.formTitle}>Acessar Galeria de Mídia</h1>
           <form onSubmit={handleSubmit}>
             <input
-              type="text"
+              type="tel" // 'tel' é o melhor tipo para forçar teclados numéricos
+              inputMode="numeric" // Ajuda extra para telemóveis
               value={code}
               onChange={(e) => setCode(e.target.value)}
               className={styles.input}
-              placeholder="Código do Grupo"
-              maxLength={8}
+              placeholder="123456"
+              maxLength={6}
             />
             <button
               type="submit"
