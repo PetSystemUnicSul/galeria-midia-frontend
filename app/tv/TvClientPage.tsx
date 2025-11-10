@@ -217,7 +217,7 @@ export default function TvPage() {
             />
             <button
               type="submit"
-              disabled={isLoading || code.length < 8}
+              disabled={isLoading || code.length < 6}
               className={styles.submitButton}
             >
               {isLoading ? 'Carregando...' : 'Acessar'}
