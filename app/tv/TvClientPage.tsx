@@ -212,12 +212,12 @@ export default function TvPage() {
               value={code}
               onChange={(e) => setCode(e.target.value)}
               className={styles.input}
-              placeholder="123456"
-              maxLength={6}
+              placeholder="12345"
+              maxLength={5}
             />
             <button
               type="submit"
-              disabled={isLoading || code.length < 6}
+              disabled={isLoading || code.length < 5}
               className={styles.submitButton}
             >
               {isLoading ? 'Carregando...' : 'Acessar'}
