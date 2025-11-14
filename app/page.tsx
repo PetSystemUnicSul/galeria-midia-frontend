@@ -24,7 +24,7 @@ export default function HomePage() {
           <Image
             src="/assets/images/viu-logo-full.png" // <-- TIRAR O /public !!!
             alt="Logo VIU"
-            width={150}
+            width={50}
             height={50} // ajuste conforme sua logo (proporção real)
             priority // importante pro header
           />
