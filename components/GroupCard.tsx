@@ -15,6 +15,7 @@ interface Group {
   name: string;
   share_code: string;
   created_at: string;
+  media_count: number;
 }
 
 type GroupCardProps = {
@@ -59,6 +60,16 @@ export default function GroupCard({ group, onGroupDeleted }: GroupCardProps) {
         <p className={styles.cardDate}>
           Criado em: {new Date(group.created_at).toLocaleDateString('pt-BR')}
         </p>
+
+        <div className={styles.mediaCount}>
+          <span>
+            {/* Lógica para "0 Mídias", "1 Mídia", "2 Mídias" */}
+            {group.media_count === 0 ? '0 Mídias' :
+             group.media_count === 1 ? '1 Mídia' :
+             `${group.media_count} Mídias`}
+          </span>
+        </div>
+        
         <div className={styles.shareCode}>
           <span>Código:</span>
           <strong>{group.share_code}</strong>
