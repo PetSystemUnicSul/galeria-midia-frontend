@@ -18,6 +18,7 @@ interface Group {
   name: string;
   share_code: string;
   created_at: string;
+  media_count: number;
 }
 
 export default function DashboardPage() {
