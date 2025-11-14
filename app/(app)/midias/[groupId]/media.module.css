@@ -10,6 +10,7 @@
   color: var(--foreground); /* MUDOU */
   opacity: 0.7;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 .section {
@@ -21,4 +22,42 @@
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--foreground); /* MUDOU */
+}
+
+.shareCodeContainer {
+  display: inline-flex; /* Faz o container ter o tamanho do conteúdo */
+  align-items: center;
+  gap: 0.75rem; /* Espaço entre os itens */
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background-color: var(--card); /* Fundo sutil (do tema escuro) */
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+
+.shareCodeContainer span {
+  color: var(--foreground);
+  opacity: 0.8;
+}
+
+.shareCodeContainer strong {
+  font-family: monospace;
+  font-size: 1.1rem; /* Deixa o código um pouco maior */
+  color: var(--foreground);
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem; /* Botão pequeno */
+  font-size: 0.75rem;
+  border-radius: 4px;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--border);
+}
+
+.copyButton:hover {
+  background-color: var(--secondary-hover);
 }

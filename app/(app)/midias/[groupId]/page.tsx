@@ -8,6 +8,8 @@ import { toast } from 'react-hot-toast';
 import MediaUploader from '@/components/MediaUploader';
 import MediaGallery from '@/components/MediaGallery';
 
+import { Copy } from 'lucide-react';
+
 // 1. Importamos o CSS Module
 import styles from './media.module.css';
 
@@ -57,6 +59,13 @@ export default function GroupDetailPage() {
     fetchGroupDetails();
   };
 
+  const copyShareCode = () => {
+    if (!group) return;
+    const shareUrl = `${window.location.origin}/tv?code=${group.share_code}`;
+    navigator.clipboard.writeText(shareUrl);
+    toast.success('URL de compartilhamento (para /tv) copiada!');
+  };
+
   if (isLoading) {
     return <p>Carregando detalhes do grupo...</p>;
   }
@@ -69,6 +78,15 @@ export default function GroupDetailPage() {
   return (
     <div>
       <h1 className={styles.title}>{group.name}</h1>
+
+      <div className={styles.shareCodeContainer}>
+        <span>Código:</span>
+        <strong>{group.share_code}</strong>
+        <button onClick={copyShareCode} className={styles.copyButton}>
+          <Copy size={16} /> Copiar
+        </button>
+      </div>
+
       <p className={styles.subtitle}>
         Gerencie as mídias do seu grupo.
       </p>
