@@ -261,9 +261,9 @@ export default function TvPage() {
           </div>
         );
       })}
-      <div className={styles.mediaName}>
+      {/* <div className={styles.mediaName}>
         {group.media[currentItemIndex].file_name}
-      </div>
+      </div> */}
     </div>
   );
 }
